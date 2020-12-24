@@ -1,6 +1,130 @@
+<!DOCTYPE html>
 <html>
+    <head>
+      <title>Tic Tac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-Hello world!!
-<hr/>
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <!-- NavigationBar -->
+      <div class="navigation-bar">
+        <div id="navigation-container">
+          <video width="200" height="200" controls autoplay loop>
+            <source src="public/TIC.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+      <div class="unauthenticated">
+        <p id="message"></p>
+        <form class="form-inline" id="sign-up">
+          <input class="form-control mr-sm-2"
+            name="credentials[email]"
+            value="Email Address"
+            type="text"
+          />
+          <input class="form-inline mr-sm-2"
+            name="credentials[password]"
+            value="an example password"
+            type="password"
+          />
+          <input name="credentials[password_confirmation]"
+          type="password"
+          value="an example password"
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+        <form class="form-inline" id="sign-in">
+          <input class="form-control mr-sm-2"
+            name="credentials[email]"
+            placeholder="Email address"
+            type="text"
+          />
+          <input class="form-inline mr-sm-2"
+            name="credentials[password]"
+            placeholder="Password"
+            type="password"
+          />
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+      <div class="authenticated">
+        <form id="change-password">
+          <input
+            placeholder="old password"
+            type="password"
+            name="passwords[old]"
+          />
+          <input
+            placeholder="new password"
+            type="password"
+            name="passwords[new]"
+          />
+          <button type="submit">Change Password</button>
+        </form>
+          <button id="sign-out" type="submit">Sign Out</button>
+          <br>
+          <br>
+          <div>
+            <button type="button" id="create-game" value="New Game" class="btn btn-dark btn-lg mb-1 mt-4" >Start A New Game!</button>
+          </div>
+          <!-- <button id="restart-game" type="submit">Restart?</button> -->
+        <!-- <p id="player-display"></p> -->
+          <div class="grid-container" id="game">
+            <table class="center">
+              <tr>
+                <td>
+                  <button type="button" class="cell" id="cell00"></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell01"></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell02"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="cell" id="cell10"></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell11"></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell12"></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" class="cell" id="cell20"></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell21"></button>
+                </td>
+                <td>
+                  <button type="button" class="cell" id="cell22"></button>
+                </td>
+              </tr>
+            </table>
+            <!-- <div class="col-4" data-cell-index='0'></div>
+            <div class="col-4" data-cell-index='1'></div>
+            <div class="col-4" data-cell-index='2'></div>
+            <div class="col-4" data-cell-index='3'></div>
+            <div class="col-4" data-cell-index='4'></div>
+            <div class="col-4" data-cell-index='5'></div>
+            <div class="col-4" data-cell-index='6'></div>
+            <div class="col-4" data-cell-index='7'></div>
+            <div class="col-4" data-cell-index='8'></div> -->
+          </div>
+        </div>
+
+        <!-- <div class="row game-space">
+          <div class="col-xs-12">
+            <div class="board" id="gameboard"></div> -->
+    </div>
+    </body>
 </html>
